@@ -1,0 +1,16 @@
+<h1>Hello Brandon, add a new resto here</h1>
+
+<br>
+<button class="btn btn-default" type="submit">
+ <%= link_to "Home", restaurants_path %>
+</button>
+<br>
+<br>
+
+<%= simple_form_for(@restaurant) do |f| %>
+ <p><%= f.input :name, placeholder: "Fuckin' Picky" %></p>
+ <p><%= f.input :address, placeholder: "Caravan 2, camping 6"%></p>
+ <p><%= f.input :phone_number, placeholder: "Phone number"%></p>
+ <p><%= f.input :category, :collection => ["chinese", "italian", "french", "belgian", "japanese"], placeholder: "What's your type bro?"%>
+ <p><%= f.button :submit %></p>
+<% end %>

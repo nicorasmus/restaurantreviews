@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  get 'restaurant/:id/reviews/new', to: 'reviews#new', as: :new_review
+
+  post 'restaurant/:id/reviews', to: 'reviews#create'
+
+  get 'restaurant/:id/reviews', to: 'reviews#index', as: :reviews
+
+  get 'restaurants',      to: 'restaurants#index', as: :restaurants
+
+  get 'restaurants/new',  to: 'restaurants#new', as: :new_restaurant
+
+  post 'restaurants',      to: 'restaurants#create'
+
+  get 'restaurants/:id',  to: 'restaurants#show', as: :restaurant
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

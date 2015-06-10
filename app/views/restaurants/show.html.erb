@@ -1,0 +1,10 @@
+<h1>Restaurant Info</h1>
+
+<button class="btn btn-default" type="submit">
+  <%= link_to "Home", restaurants_path %>
+</button>
+<h2><%= @restaurant.name %></h2>
+<br>
+<p>Address: <%= @restaurant.address %> </p>
+<p>Contact: <%= @restaurant.phone_number %> </p>
+<p>Style: <%= @restaurant.category %> </p>

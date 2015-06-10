@@ -1,0 +1,11 @@
+<h1>All the restos here biatch</h1>
+
+<br>
+<button class="btn btn-default" type="submit">
+ <%= link_to "New Resto", new_restaurant_path %>
+</button>
+<br>
+
+<% @restaurants.each do |restaurant| %>
+    <h2><a href="<%= restaurant_path(restaurant)%>"><%= restaurant.name %></a></h2>
+  <% end %>
